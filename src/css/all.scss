@@ -1,0 +1,28 @@
+@charset "utf-8";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* ==========
+  #CONFIG
+  ========== */
+@import "config/variables";
+@import "config/normal";
+@import "config/reboot";
+@import "config/other";
+@import "config/animate";
+@import "config/keyframes";
+
+
+/* ==========
+  #PLUGIN
+  ========== */
+  @import "plugin/aos/aos";
+  @import "plugin/swiper/swiper";
+  // @import "plugin/swiper/swiper-bundle";
+  @import "plugin/slick/slick.scss";
+  @import "plugin/slick/slick-theme.scss";
+  @import "plugin/lightgallery-bundle";
+
+  @import "page/layout";
+  @import "page/index";
+

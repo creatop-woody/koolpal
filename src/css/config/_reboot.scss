@@ -1,0 +1,32 @@
+input,
+select,
+textarea,
+button {
+  &:focus {
+    outline: none;
+  }
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+input.error,
+select.error,
+textarea.error {
+  border-color: $danger;
+}
+
+label.error {
+  display: inline-block;
+  padding: 0.25rem 0.625rem;
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+  color: $white;
+  background-color: $danger;
+  border-radius: 0.25rem;
+}

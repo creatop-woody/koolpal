@@ -1,0 +1,22 @@
+
+.question-box{
+  border:$px-4 solid #FF9900;
+  border-radius: $px-50;
+
+}
+.q-title{
+  width: max-content;
+  position: absolute;
+  top: 0;
+  left:50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  border-radius: $px-80;
+}
+.link-box{
+  max-width: 100%;
+  background-color: #FFF;
+  border:$px-2 solid #FF9900;
+  color: #FF9900;
+  border-radius: $px-10;
+}

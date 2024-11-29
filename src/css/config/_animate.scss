@@ -1,0 +1,324 @@
+.fade-up,
+.fade,
+.fade-left,
+.fade-right,
+.fade:not(.show),
+.flipInX,
+.flipInY,
+.banner-animate,
+.l-fade,
+.fade-down,
+.l-fade-left,
+.g-fade,
+.g-fade-up,
+.g-fade-left,
+.g-fade-right,
+.g-fadeDown{
+  opacity: 0;
+}
+.g-line-x{
+  transform: scaleX(0);
+}
+.no-js{
+  .l-fade,
+  .fade-up,
+  .fade,
+  .fade-left,
+  .fade-right,
+  .fade:not(.show),
+  .flipInX,
+  .flipInY,
+  .banner-animate,
+  .fade-down,
+  .l-fade-left,
+  .g-fade,
+  .g-fade-up,
+  .g-fade-left,
+  .g-fade-right,
+  .g-fadeDown{
+      opacity: 1;
+  }
+  .img-mask-anime{
+    .img-mask{
+      transform: translateY(0);
+      &::after{
+        display: none;
+      }
+    }
+  }
+  .g-line-x{
+    transform: scaleX(1);
+  }
+}
+.img-mask-anime{
+  overflow: hidden;
+  display: block;
+  .img-mask{
+    overflow: hidden;
+    transition-timing-function: 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    transition-duration: 1.3s;
+    transform: translateY(100%);
+    transform-origin: left top;
+    position: relative;
+    display: block;
+    &::after{
+      content: '';
+      background-color: #DADADA;
+      position: absolute;
+      width: 101%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transition-duration: 1.3s;
+      transform: scaleY(1);
+      transition-timing-function: 1s cubic-bezier(.55,.085,.68,.53);
+      transform-origin: top;
+      transition-delay: .2s;
+    }
+  }
+ 
+  &.a-play{
+    .img-mask{
+      transform: translateY(0);
+      &::after{
+        transform: scaleY(0);
+      }
+    }
+  }
+}
+.scaleY{
+  transform: scaleY(0);
+}
+.g-animate,
+.gasp-animate{
+  .g-fade,
+  .g-fade-up,
+  .g-fade-left,
+  .g-fade-right,
+  .g-fadeDown,
+  .scaleY,
+  .g-line-x{
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function:ease;
+    animation-iteration-count:1;
+  }
+ 
+}
+
+.g-animate.a-play,
+.gasp-animate.a-play{
+  .g-fade{
+    animation-name: fade;
+  }
+  .g-fade-up{
+    animation-name: fadeInUp;
+  }
+  .g-fade-left{
+    animation-name: fade-left;
+  }
+  .g-fade-right{
+    animation-name:  fade-right;
+  }
+  .g-fadeDown{
+    animation-name:fadeDown;
+  }
+  .scaleY{
+    animation-name:scaleY;
+  }
+  .g-line-x{
+    animation-name: line-x;
+  }
+}
+
+.gasp-animate.a-close{
+  .g-fade,
+  .g-fade-up,
+  .g-fade-left{
+    animation-name: fadeOut;
+    animation-delay: 0s;
+  }
+  
+}
+
+.fade-up.a-play,
+.fade-up.is-inview{
+	animation-name: fadeInUp;
+}
+.fade.a-play,
+.l-fade.is-inview{
+	animation-name: fade;
+}
+.fade-left.a-play,
+.fade-left.is-inview,
+.l-fade-left.is-inview{
+  animation-name: fade-left;
+}
+.fade-right.a-play,
+.fade-right.is-inview{
+  animation-name:  fade-right;
+}
+.banner-animate.a-play,
+.banner-animate.is-inview{
+  animation-name: banner-scale;
+}
+.flipInX.a-play,
+.flipInX.is-inview{
+  animation-name: flipInX ;
+}
+.flipInY.a-play,
+.flipInY.is-inview{
+  animation-name: flipInY ;
+}
+.fade-down.a-play,
+.fade-down.is-inview{
+  animation-name:fadeDown;
+}
+.a-play{
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function:ease;
+  animation-iteration-count:1;
+}
+.is-inview{
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function:ease;
+  animation-iteration-count:1;
+}
+.a-duration-13{
+  animation-duration: 1.3s;
+}
+.a-duration-15{
+  animation-duration: 1.5s;
+}
+.a-delay-1{
+  animation-delay: .1s;
+}
+.a-delay-2{
+  animation-delay: .2s;
+}
+.a-delay-3{
+  animation-delay: .3s;
+}
+.a-delay-4{
+  animation-delay: .4s;
+}
+.a-delay-5{
+  animation-delay: .5s;
+}
+.a-delay-6{
+  animation-delay: .6s;
+}
+.a-delay-7{
+  animation-delay: .7s;
+}
+.a-delay-8{
+  animation-delay: .8s;
+}
+.a-delay-9{
+  animation-delay: .9s;
+}
+.a-delay-10{
+  animation-delay: .10s;
+}
+.a-delay-11{
+  animation-delay: .11s;
+}
+.a-delay-12{
+  animation-delay: .12s;
+}
+.hover-scale{
+  img{
+    transition: all .5s;
+  }
+  &:hover{
+    img{
+      transform: scale(1.05);
+    }
+  }
+  
+}
+.hover-boxshadow{
+  transition: all .5s;
+  &:hover{
+    box-shadow: 0 0 9px rgba($color: #000000, $alpha: 0.4) ;
+  }
+}
+.scroll-animate{
+ 
+  @media (min-width: 768px){
+    img{
+      width: 125%!important;
+      max-width: initial;
+    }
+    &.a-play{
+      img{
+        animation:scroll-animate 8s linear 1 forwards ;
+      }
+    }
+  }
+
+}
+.s-scroll-animate{
+  img{
+    width: 125%!important;
+    max-width: initial;
+  }
+  &.a-play{
+    img{
+      animation:scroll-animate 4s linear 1 forwards ;
+    }
+  }
+}
+
+@keyframes scroll-animate {
+  0%{
+    -webkit-transform:  translateX(0%);;
+    transform: translateX(0%);
+   
+  }
+
+  to {
+    -webkit-transform:  translateX(0%);;
+    transform: translateX(-20%);
+  }
+}
+
+.gasp-title{
+  overflow: hidden;
+  p{
+    transform: translateY(100%);
+  }
+}
+.gasp-title-2{
+  overflow: hidden;
+  p{
+    transform: translateX(-100%);
+  }
+}
+.a-play{
+  .gasp-title,
+  .gasp-title-2{
+    p{
+      animation-duration: 1.2s;
+      animation-fill-mode: forwards;
+      animation-timing-function:ease;
+      animation-iteration-count:1;
+    }
+
+  }
+  .gasp-title{
+    p{
+      animation-name: fade-up;
+   
+    }
+  }
+  .gasp-title-2{
+    p{
+      animation-name: fade-X-in;
+    }
+  }
+}
